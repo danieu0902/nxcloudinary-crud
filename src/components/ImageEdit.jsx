@@ -36,23 +36,24 @@ function ImageEdit({ img }) {
 
             <div
                 onClick={() => document.getElementById(dialogId).showModal()}
-                className={`absolute bottom-[88px] right-2 p-1 border border-slate-300 bg-blue-400 text-white hover:bg-blue-500 rounded-full`}>
-                <Eye />
+                className={`cursor-pointer flex absolute bottom-[88px] right-2 p-1 border border-slate-300 bg-blue-400 text-white hover:bg-blue-500 rounded-full`}>
+                <Eye /> <h1>VER</h1>
             </div>
             <dialog
                 id={dialogId}
                 onClick={() => document.getElementById(dialogId).close()}
-                className='backdrop:bg-black/50 backdrop:backdrop-blur-none'>
+                className=' backdrop:bg-black/50 backdrop:backdrop-blur-none'>
                 <img src={img.secure_url} alt="view" />
             </dialog>
 
             <button formAction={actionUpdate} title='ACTUALIZAR' disabled={pendingUpdate}
-                className={`absolute bottom-[48px] right-2 p-1 border border-slate-300 bg-yellow-400 text-white hover:bg-yellow-500 rounded-full disabled:bg-slate-400`}>
-                <RotateCw />
+                className={`cursor-pointer flex absolute bottom-[48px] right-2 p-1 border border-slate-300 bg-yellow-400 text-white hover:bg-yellow-500 rounded-full disabled:bg-slate-400`}>
+                <RotateCw /> <h1>EDITAR</h1>
             </button>
             <button formAction={actionDelete} title='ELIMINAR' disabled={pendingDelete}
-                className={`absolute bottom-[8px] right-2 p-1 border border-slate-300 bg-red-400 text-white hover:bg-red-500 rounded-full disabled:bg-slate-400`}>
-                <Trash />
+                className={`cursor-pointer flex absolute bottom-[8px] right-2 p-1 border border-slate-300 bg-red-400 text-white hover:bg-red-500 rounded-full disabled:bg-slate-400`}>
+                <Trash /> 
+                <h1>BORRAR</h1>
             </button>
 
         </form>

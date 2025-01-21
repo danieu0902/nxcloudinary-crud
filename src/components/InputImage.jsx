@@ -81,10 +81,10 @@ export default function InputImage({ image = default_image }) {
                 style={{
                     display: 'block',
                     aspectRatio: 1,
-                    width: '324px',
-                    height: '200px',
+                    width: '800px',
+                    height: '800px',
                     objectFit: 'cover',
-                    objectPosition: 'center'
+                    objectPosition: 'center',
                 }} />
             <input
                 type='file'
